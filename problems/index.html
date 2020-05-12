@@ -1,0 +1,892 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A training platform for competitive programming">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Problems - WISP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="WISP" class="md-header-nav__button md-logo" aria-label="WISP">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            WISP
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Problems
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Compete-McGill/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Compete McGill
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="WISP" class="md-nav__button md-logo" aria-label="WISP">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    WISP
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Compete-McGill/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Compete McGill
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Problems
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Problems" class="md-nav__link md-nav__link--active">
+      Problems
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-development" class="md-nav__link">
+    For Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-production" class="md-nav__link">
+    For Production
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-usage" class="md-nav__link">
+    Sample Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemsets" class="md-nav__link">
+    ProblemSets
+  </a>
+  
+    <nav class="md-nav" aria-label="ProblemSets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-problemsets" class="md-nav__link">
+    List all ProblemSets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-specific-problemset" class="md-nav__link">
+    Get specific ProblemSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-problemset" class="md-nav__link">
+    Create ProblemSet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems_1" class="md-nav__link">
+    Problems
+  </a>
+  
+    <nav class="md-nav" aria-label="Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-problems" class="md-nav__link">
+    List all Problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-specific-problem" class="md-nav__link">
+    Get specific Problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-problem" class="md-nav__link">
+    Create Problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-exists" class="md-nav__link">
+    Problems exists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-development" class="md-nav__link">
+    For Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-production" class="md-nav__link">
+    For Production
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-usage" class="md-nav__link">
+    Sample Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemsets" class="md-nav__link">
+    ProblemSets
+  </a>
+  
+    <nav class="md-nav" aria-label="ProblemSets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-problemsets" class="md-nav__link">
+    List all ProblemSets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-specific-problemset" class="md-nav__link">
+    Get specific ProblemSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-problemset" class="md-nav__link">
+    Create ProblemSet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems_1" class="md-nav__link">
+    Problems
+  </a>
+  
+    <nav class="md-nav" aria-label="Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-problems" class="md-nav__link">
+    List all Problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-specific-problem" class="md-nav__link">
+    Get specific Problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-problem" class="md-nav__link">
+    Create Problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-exists" class="md-nav__link">
+    Problems exists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Compete-McGill/edit/master/docs/problems.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="problems">Problems</h1>
+<p>Among other functionality, WISP hosts an evolving set of problems and problem sets for users to attempt, and tracks their progress. The purpose of this microservice is to manage all data and logic relating to these problems and problem sets.</p>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>src/    # Contains all source code
+    config/
+    controllers/
+    database/
+        interactions/
+        models/
+    interfaces/
+    routes/
+    util/
+    validators/
+    app.ts
+    server.ts
+docs/
+    index.md  # This documentation page.
+    ...       # Other markdown pages, images and other files.
+Dockerfile          
+docker-compose.yaml
+mkdocs.yml    # Configuration for these docs
+LICENSE
+nodemon.json
+package.json
+package-lock.json
+swaggerDoc.js
+tsconfig.json
+tslint.json
+</code></pre>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="for-development">For Development</h3>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><a href="https://www.docker.com/"><code>docker</code></a></li>
+<li><a href="https://docs.docker.com/compose/"><code>docker-compose</code></a></li>
+</ul>
+<p><strong>Running</strong></p>
+<p>Clone the repository, and navigate to the root of the project.</p>
+<p>Then run:</p>
+<pre><code class="bash">npm start
+</code></pre>
+
+<h3 id="for-production">For Production</h3>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><a href="https://www.docker.com/"><code>docker</code></a></li>
+</ul>
+<p><strong>Build</strong></p>
+<p>Clone the repository, and navigate to the root of the project.</p>
+<p>Then run:</p>
+<pre><code class="bash">docker build -t wisp-problems-microservice:latest
+</code></pre>
+
+<pre><code class="bash">docker run --rm -d -p 3000:3000 wisp-problems-microservice
+</code></pre>
+
+<h2 id="sample-usage">Sample Usage</h2>
+<h3 id="problemsets">ProblemSets</h3>
+<h4 id="list-all-problemsets">List all ProblemSets</h4>
+<p><strong>Query parameters</strong>
+* <code>includeProblems=true</code>: for each problem set returned, includes an array of problems belonging to that problem set as the field <code>problems</code></p>
+<p>Request:</p>
+<pre><code class="bash">curl --request GET \
+  --url 'http://localhost:3000/problemSets'
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">[
+  {
+    &quot;tags&quot;: [
+      &quot;Graph Theory&quot;,
+      &quot;Other Tag&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb855b2cf015c0062d71f88&quot;,
+    &quot;title&quot;: &quot;Test Problem Set 1&quot;,
+    &quot;description&quot;: &quot;This is a test problem set!&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:27:46.233Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:27:46.233Z&quot;,
+    &quot;__v&quot;: 0
+  }
+]
+</code></pre>
+
+<h4 id="get-specific-problemset">Get specific ProblemSet</h4>
+<p><strong>Query parameters</strong>
+* <code>includeProblems=true</code>: includes an array of problems belonging to the specified problem set as the field <code>problems</code></p>
+<p>Request:</p>
+<pre><code class="bash">curl --request GET \
+  --url http://localhost:3000/problemSets/5eb855b2cf015c0062d71f88
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;tags&quot;: [
+        &quot;Graph Theory&quot;,
+        &quot;Other Tag&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb855b2cf015c0062d71f88&quot;,
+    &quot;title&quot;: &quot;Test Problem Set 1&quot;,
+    &quot;description&quot;: &quot;This is a test problem set!&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:27:46.233Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:27:46.233Z&quot;,
+    &quot;__v&quot;: 0
+}
+</code></pre>
+
+<h4 id="create-problemset">Create ProblemSet</h4>
+<p>Request:</p>
+<pre><code class="bash">curl --request POST \
+  --url http://localhost:3000/problemSets \
+  --header 'content-type: application/json' \
+  --data '{
+    &quot;title&quot; : &quot;Test Problem Set 1&quot;,
+    &quot;description&quot; : &quot;This is a test problem set!&quot;,
+    &quot;tags&quot; : [&quot;Graph Theory&quot;, &quot;Other Tag&quot;]
+}'
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;tags&quot;: [
+        &quot;Graph Theory&quot;,
+        &quot;Other Tag&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb855b2cf015c0062d71f88&quot;,
+    &quot;title&quot;: &quot;Test Problem Set 1&quot;,
+    &quot;description&quot;: &quot;This is a test problem set!&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:27:46.233Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:27:46.233Z&quot;,
+    &quot;__v&quot;: 0
+}
+</code></pre>
+
+<h3 id="problems_1">Problems</h3>
+<h4 id="list-all-problems">List all Problems</h4>
+<p>Request:</p>
+<pre><code class="bash">curl --request GET \
+  --url http://localhost:3000/problems
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">[
+  {
+    &quot;problemMetadata&quot;: {
+      &quot;platformProblemId&quot;: &quot;1352G&quot;,
+      &quot;difficulty&quot;: &quot;easy&quot;
+    },
+    &quot;problemSetIds&quot;: [
+      &quot;5eb855b2cf015c0062d71f88&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb8570217271500be61b2c9&quot;,
+    &quot;title&quot;: &quot;Test Problem 1: Special Permutation&quot;,
+    &quot;source&quot;: &quot;CODEFORCES&quot;,
+    &quot;sourceLink&quot;: &quot;https://codeforces.com/problemset/problem/1352/G&quot;,
+    &quot;problemId&quot;: &quot;6e88ec57160cd8164d9460a9885fbece7047c13c&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;__v&quot;: 0
+  }
+]
+</code></pre>
+
+<h4 id="get-specific-problem">Get specific Problem</h4>
+<p>Request:</p>
+<pre><code class="bash">curl --request GET \
+  --url http://localhost:3000/problems/5eb8570217271500be61b2c9
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;problemMetadata&quot;: {
+        &quot;platformProblemId&quot;: &quot;1352G&quot;,
+        &quot;difficulty&quot;: &quot;easy&quot;
+    },
+    &quot;problemSetIds&quot;: [
+        &quot;5eb855b2cf015c0062d71f88&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb8570217271500be61b2c9&quot;,
+    &quot;title&quot;: &quot;Test Problem 1: Special Permutation&quot;,
+    &quot;source&quot;: &quot;CODEFORCES&quot;,
+    &quot;sourceLink&quot;: &quot;https://codeforces.com/problemset/problem/1352/G&quot;,
+    &quot;problemId&quot;: &quot;6e88ec57160cd8164d9460a9885fbece7047c13c&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;__v&quot;: 0
+}
+</code></pre>
+
+<h4 id="create-problem">Create Problem</h4>
+<p>Request:</p>
+<pre><code class="bash">curl --request POST \
+  --url http://localhost:3000/problems \
+  --header 'content-type: application/json' \
+  --data '{
+    &quot;title&quot;: &quot;Test Problem 1: Special Permutation&quot;,
+    &quot;source&quot;:&quot;CODEFORCES&quot;,
+    &quot;sourceLink&quot;:&quot;https://codeforces.com/problemset/problem/1352/G&quot;,
+    &quot;problemSetIds&quot;: [&quot;5eb855b2cf015c0062d71f88&quot;],
+    &quot;problemMetadata&quot;: {
+        &quot;platformProblemId&quot;:&quot;1352G&quot;,
+        &quot;difficulty&quot;:&quot;easy&quot;
+    }
+}'
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;problemSetIds&quot;: [
+        &quot;5eb855b2cf015c0062d71f88&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb8570217271500be61b2c9&quot;,
+    &quot;title&quot;: &quot;Test Problem 1: Special Permutation&quot;,
+    &quot;source&quot;: &quot;CODEFORCES&quot;,
+    &quot;sourceLink&quot;: &quot;https://codeforces.com/problemset/problem/1352/G&quot;,
+    &quot;problemMetadata&quot;: {
+        &quot;platformProblemId&quot;: &quot;1352G&quot;,
+        &quot;difficulty&quot;: &quot;easy&quot;
+    },
+    &quot;problemId&quot;: &quot;6e88ec57160cd8164d9460a9885fbece7047c13c&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;__v&quot;: 0
+}
+</code></pre>
+
+<h4 id="problems-exists">Problems exists</h4>
+<p>The <code>id</code> that is used in this requests URL is a custom ID that can be generated by concatenating the platform ("CODEFORCES") and the problem ID as displayed on the platform ("1352G"), and then taking the SHA-1 hash of the resulting string.</p>
+<p>Request:</p>
+<pre><code class="bash">curl --request GET \
+  --url http://localhost:3000/problems/6e88ec57160cd8164d9460a9885fbece7047c13c/exists
+</code></pre>
+
+<p>Response:</p>
+<pre><code class="json">{
+    &quot;problemMetadata&quot;: {
+    &quot;platformProblemId&quot;: &quot;1352G&quot;,
+    &quot;difficulty&quot;: &quot;easy&quot;
+    },
+    &quot;problemSetIds&quot;: [
+    &quot;5eb855b2cf015c0062d71f88&quot;
+    ],
+    &quot;_id&quot;: &quot;5eb8570217271500be61b2c9&quot;,
+    &quot;title&quot;: &quot;Test Problem 1: Special Permutation&quot;,
+    &quot;source&quot;: &quot;CODEFORCES&quot;,
+    &quot;sourceLink&quot;: &quot;https://codeforces.com/problemset/problem/1352/G&quot;,
+    &quot;problemId&quot;: &quot;6e88ec57160cd8164d9460a9885fbece7047c13c&quot;,
+    &quot;createdAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;updatedAt&quot;: &quot;2020-05-10T19:33:22.888Z&quot;,
+    &quot;__v&quot;: 0
+}
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../getting_started/" title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/Compete-McGill" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.instagram.com/competemcgill/" target="_blank" rel="noopener" title="www.instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/CompeteMcGill/" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
