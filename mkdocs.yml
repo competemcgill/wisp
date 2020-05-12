@@ -1,1 +1,34 @@
-site_name: My Docs
+site_name: WISP
+site_description: A training platform for competitive programming
+
+repo_name: Compete McGill
+repo_url: https://github.com/Compete-McGill
+
+nav:
+    - Introduction: index.md
+    - Getting Started: getting_started.md
+    - Problems: problems.md
+theme:
+  name: "material"
+#   custom_dir: custom_theme/
+  # logo: "img/cp-logo.svg"
+#   favicon: "img/favicon-16x16.png"
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github
+  language: "en"
+  palette:
+    primary: "red"
+    accent: "red"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Compete-McGill
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/competemcgill/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/CompeteMcGill/
