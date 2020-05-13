@@ -1,18 +1,21 @@
 site_name: WISP
+site_url: https://docs.wisp.compete-mcgill.ca
 site_description: A training platform for competitive programming
 
 repo_name: Compete McGill
 repo_url: https://github.com/Compete-McGill
+edit_uri: ""
 
 nav:
     - Introduction: index.md
     - Getting Started: getting_started.md
-    - Problems: problems.md
+    - Microservices:
+      - Problems: microservices/problems.md
+      - Users: microservices/users.md
 theme:
   name: "material"
-#   custom_dir: custom_theme/
   # logo: "img/cp-logo.svg"
-#   favicon: "img/favicon-16x16.png"
+  favicon: "img/cp-logo.svg"
   icon:
     logo: material/library
     repo: fontawesome/brands/github
@@ -32,3 +35,8 @@ extra:
       link: https://www.instagram.com/competemcgill/
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/CompeteMcGill/
+
+markdown_extensions:
+  - pymdownx.tabbed
+  - codehilite
+  - admonition
