@@ -6,7 +6,7 @@ WISP is a project aimed at creating a fluid and fun experience for members of Co
 
 You can find WISP **hosted** [**here**](http://wisp.compete-mcgill.ca).
 
-And you can find our **documentation** [**here**](http://wisp.compete-mcgill.ca).
+And you can find our **documentation** [**here**](https://docs.wisp.compete-mcgill.ca).
 
 ## Components
 The repositories that make up this application can be found at these repositories:
