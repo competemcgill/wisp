@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../img/cp-logo.svg">
-      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
     
     
       
@@ -23,9 +23,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.616af814.min.css">
       
       
         
@@ -52,7 +52,8 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -449,30 +450,30 @@
                 <h1 id="users">Users</h1>
 <p>The purpose of this microservice is to manage all logic relating to users and to privide OAuth2.0-compliant authorization endpoints. Since WISP allows users to solve problems across multiple sites (such as Codeforces and Katis), it is this microservice's role to collect and keep the user's information in-sync across all sites.</p>
 <h2 id="project-layout">Project layout</h2>
-<div class="codehilite"><pre><span></span><code><span class="err">src/                      .............     # source code</span>
-<span class="err">    config/</span>
-<span class="err">    controllers/</span>
-<span class="err">    database/</span>
-<span class="err">        interactions/</span>
-<span class="err">        models/</span>
-<span class="err">    interfaces/</span>
-<span class="err">    routes/</span>
-<span class="err">    util/</span>
-<span class="err">    validators/</span>
-<span class="err">    app.ts</span>
-<span class="err">    server.ts</span>
-<span class="err">test/                    .............     # unit tests        </span>
-<span class="err">    controllers/</span>
-<span class="err">Dockerfile          </span>
-<span class="err">docker-compose.yaml</span>
-<span class="err">docker-compose.test.yaml</span>
-<span class="err">LICENSE</span>
-<span class="err">nodemon.json</span>
-<span class="err">package.json</span>
-<span class="err">package-lock.json</span>
-<span class="err">swaggerDoc.js</span>
-<span class="err">tsconfig.json</span>
-<span class="err">tslint.json</span>
+<div class="codehilite"><pre><span></span><code><span class="n">src</span><span class="o">/</span>                      <span class="p">.............</span>     <span class="o">#</span> <span class="k">source</span> <span class="n">code</span>
+    <span class="n">config</span><span class="o">/</span>
+    <span class="n">controllers</span><span class="o">/</span>
+    <span class="k">database</span><span class="o">/</span>
+        <span class="n">interactions</span><span class="o">/</span>
+        <span class="n">models</span><span class="o">/</span>
+    <span class="n">interfaces</span><span class="o">/</span>
+    <span class="n">routes</span><span class="o">/</span>
+    <span class="n">util</span><span class="o">/</span>
+    <span class="n">validators</span><span class="o">/</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">ts</span>
+    <span class="n">server</span><span class="p">.</span><span class="n">ts</span>
+<span class="n">test</span><span class="o">/</span>                    <span class="p">.............</span>     <span class="o">#</span> <span class="n">unit</span> <span class="n">tests</span>        
+    <span class="n">controllers</span><span class="o">/</span>
+<span class="n">Dockerfile</span>          
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">yaml</span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">yaml</span>
+<span class="n">LICENSE</span>
+<span class="n">nodemon</span><span class="p">.</span><span class="n">json</span>
+<span class="n">package</span><span class="p">.</span><span class="n">json</span>
+<span class="n">package</span><span class="o">-</span><span class="k">lock</span><span class="p">.</span><span class="n">json</span>
+<span class="n">swaggerDoc</span><span class="p">.</span><span class="n">js</span>
+<span class="n">tsconfig</span><span class="p">.</span><span class="n">json</span>
+<span class="n">tslint</span><span class="p">.</span><span class="n">json</span>
 </code></pre></div>
 
 
@@ -607,37 +608,37 @@ npm start
 <p>Model</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="err">{</span>
-<span class="err">    username: String,</span>
-<span class="err">    email: String</span>
-<span class="err">    password: String,</span>
-<span class="err">    role: String,</span>
-<span class="err">    info: {</span>
-<span class="err">        major: String,</span>
-<span class="err">        year: String,</span>
-<span class="err">        school: String,</span>
-<span class="err">        bio: String,</span>
-<span class="err">        profilePhoto: String,</span>
-<span class="err">    },</span>
-<span class="err">    problems: [</span>
-<span class="err">        {</span>
-<span class="err">            problemId: String,</span>
-<span class="err">            isComplete: Boolean,</span>
-<span class="err">            status: String,</span>
-<span class="err">        },</span>
-<span class="err">    ],</span>
-<span class="err">    platformData: {</span>
-<span class="err">        codeforces: {</span>
-<span class="err">            username: String,</span>
-<span class="err">            email: String,</span>
-<span class="err">            lastSubmission: {</span>
-<span class="err">                problemId: String,</span>
-<span class="err">                isComplete: Boolean,</span>
-<span class="err">                status: String,</span>
-<span class="err">            },</span>
-<span class="err">        },</span>
-<span class="err">    },</span>
-<span class="err">    createdAt: Date,</span>
-<span class="err">    updatedAt: Date</span>
+    <span class="n">username</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="n">String</span>
+    <span class="n">password</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="k">role</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="n">info</span><span class="p">:</span> <span class="err">{</span>
+        <span class="n">major</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+        <span class="k">year</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+        <span class="n">school</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+        <span class="n">bio</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+        <span class="n">profilePhoto</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="err">}</span><span class="p">,</span>
+    <span class="n">problems</span><span class="p">:</span> <span class="p">[</span>
+        <span class="err">{</span>
+            <span class="n">problemId</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+            <span class="n">isComplete</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+            <span class="n">status</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+        <span class="err">}</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">platformData</span><span class="p">:</span> <span class="err">{</span>
+        <span class="n">codeforces</span><span class="p">:</span> <span class="err">{</span>
+            <span class="n">username</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+            <span class="n">email</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+            <span class="n">lastSubmission</span><span class="p">:</span> <span class="err">{</span>
+                <span class="n">problemId</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+                <span class="n">isComplete</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+                <span class="n">status</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+            <span class="err">}</span><span class="p">,</span>
+        <span class="err">}</span><span class="p">,</span>
+    <span class="err">}</span><span class="p">,</span>
+    <span class="n">createdAt</span><span class="p">:</span> <span class="nb">Date</span><span class="p">,</span>
+    <span class="n">updatedAt</span><span class="p">:</span> <span class="nb">Date</span>
 <span class="err">}</span>
 </code></pre></div>
 
@@ -971,15 +972,15 @@ npm start
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
-      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
