@@ -17,7 +17,7 @@ start-problems:
 	@docker-compose up --scale wisp-ui=0 --scale wisp-gateway=0 --scale wisp-users=0
 
 start-users:
-	@echo "Starting local problems server..."
+	@echo "Starting local users server..."
 	@echo "Problems API: http://localhost:3001"
 	@echo "Users API: http://localhost:3002"
 	@docker-compose up --scale wisp-ui=0 --scale wisp-gateway=0
