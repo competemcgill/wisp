@@ -1,0 +1,48 @@
+version: "3"
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    logging:
+      driver: none
+  wisp-problems:
+    image: competemcgill/wisp-problems:latest
+    container_name: wisp-problems
+    environment:
+      - NODE_ENV=dev
+      - DB_URL=mongodb://mongo:27017
+    ports:
+      - 3001:3000
+    links:
+      - mongo
+  wisp-users:
+    image: competemcgill/wisp-users:latest
+    container_name: wisp-users
+    environment:
+      - NODE_ENV=dev
+      - DB_URL=mongodb://mongo:27017
+      - SECRET=Ks10daK3g
+      - WISP_PROBLEMS_URL=http://wisp-users:3000
+    ports:
+      - 3002:3000
+    links:
+      - mongo
+  wisp-gateway:
+    image: competemcgill/e2e-wisp-gateway:latest
+    container_name: wisp-gateway
+    ports:
+      - 3000:80
+    links:
+      - wisp-users
+      - wisp-problems
+  wisp-ui:
+    image: competemcgill/wisp-ui:latest
+    container_name: wisp-ui
+    environment:
+      - VUE_APP_WISP_API_URL=http://localhost:3000
+    ports:
+      - 80:80
+    links:
+      - wisp-gateway
+      - wisp-users
+      - wisp-problems

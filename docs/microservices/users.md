@@ -35,6 +35,8 @@ The purpose of this microservice is to manage all logic relating to users and to
 
 **Requirements**
 
+* [`gcloud`](https://cloud.google.com/sdk/install)
+* [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [`docker`](https://www.docker.com/)
 * [`docker-compose`](https://docs.docker.com/compose/)
 
@@ -53,9 +55,30 @@ The purpose of this microservice is to manage all logic relating to users and to
 
 **Running**
 
-Clone the [repository](https://github.com/Compete-McGill/wisp-users-microservice), and navigate to the root of the project.
+1. Login to a gcloud account that has access to our cluster on GKE
 
-Then run:
+```bash
+$ gcloud auth login <EMAIL>
+```
+
+2. Connect to our wisp-prod cluster
+
+```bash
+$ gcloud container clusters get-credentials wisp-prod --zone northamerica-northeast1-c --project wisp-276819
+```
+
+3. Use port forwarding to get access to the problems microservice (this will keep running in foreground by default)
+
+```bash
+# we don't currently have a dev namespace so prod will be used intermittently
+$ kubectl port-forward -n prod deploy/wisp-problems 3001:3000
+```
+
+NOTE: steps 1 through 3 can be skipped by running a local copy of the problems microservice with docker or node (keep in mind that the default mongodb url for the problems microservice is mongodb://mongo:27017)
+
+4. Clone the [repository](https://github.com/Compete-McGill/wisp-users-microservice), and navigate to the root of the project.
+
+5. run:
 
 ```bash
 npm i
@@ -88,7 +111,7 @@ For a more extensive documentation, visit the swagger docs
 
 | Status | Response |
 | --- | --- |
-| 200 | `{"token": "jwt token"}` |
+| 200 | `{"token": "jwt token", "user": {...}}` |
 | 400 | Invalid email or passowrd |
 | 422 | Missing or invalid email/password |
 | 500 | Internal server error |
@@ -129,6 +152,7 @@ For a more extensive documentation, visit the swagger docs
         bio: String,
         profilePhoto: String,
     },
+    problemSets: [ObjectId],
     problems: [
         {
             problemId: String,
@@ -247,7 +271,7 @@ See user model
 
 ```json
 {
-    "problemId": "OnjectId"
+    "problemId": "ObjectId"
 }
 ```
 
@@ -270,7 +294,7 @@ See user model
 
 ```json
 {
-    "problemSetId": "OnjectId"
+    "problemSetId": "ObjectId"
 }
 ```
 
