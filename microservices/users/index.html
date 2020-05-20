@@ -525,30 +525,17 @@
 </tbody>
 </table>
 <p><strong>Running</strong></p>
-<ol>
-<li>Login to a gcloud account that has access to our cluster on GKE</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>$ gcloud auth login &lt;EMAIL&gt;
-</code></pre></div>
-
-
-<ol>
-<li>Connect to our wisp-prod cluster</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>$ gcloud container clusters get-credentials wisp-prod --zone northamerica-northeast1-c --project wisp-276819
-</code></pre></div>
-
-
-<ol>
-<li>Use port forwarding to get access to the problems microservice (this will keep running in foreground by default)</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="c1"># we don&#39;t currently have a dev namespace so prod will be used intermittently</span>
-$ kubectl port-forward -n prod deploy/wisp-problems <span class="m">3001</span>:3000
-</code></pre></div>
-
-
 <p>NOTE: steps 1 through 3 can be skipped by running a local copy of the problems microservice with docker or node (keep in mind that the default mongodb url for the problems microservice is mongodb://mongo:27017)</p>
 <ol>
+<li>
+<p>Login to a gcloud account that has access to our cluster on GKE</p>
+</li>
+<li>
+<p>Connect to our wisp-prod cluster</p>
+</li>
+<li>
+<p>Use port forwarding to forward traffic on port 3001 to the problems microservice (this will keep running in foreground by default)</p>
+</li>
 <li>
 <p>Clone the <a href="https://github.com/Compete-McGill/wisp-users-microservice">repository</a>, and navigate to the root of the project.</p>
 </li>
