@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../img/cp-logo.svg">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
     
     
       
@@ -23,9 +23,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.616af814.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
       
       
         
@@ -52,8 +52,7 @@
   
     
     
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -450,30 +449,30 @@
                 <h1 id="users">Users</h1>
 <p>The purpose of this microservice is to manage all logic relating to users and to privide OAuth2.0-compliant authorization endpoints. Since WISP allows users to solve problems across multiple sites (such as Codeforces and Katis), it is this microservice's role to collect and keep the user's information in-sync across all sites.</p>
 <h2 id="project-layout">Project layout</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">src</span><span class="o">/</span>                      <span class="p">.............</span>     <span class="o">#</span> <span class="k">source</span> <span class="n">code</span>
-    <span class="n">config</span><span class="o">/</span>
-    <span class="n">controllers</span><span class="o">/</span>
-    <span class="k">database</span><span class="o">/</span>
-        <span class="n">interactions</span><span class="o">/</span>
-        <span class="n">models</span><span class="o">/</span>
-    <span class="n">interfaces</span><span class="o">/</span>
-    <span class="n">routes</span><span class="o">/</span>
-    <span class="n">util</span><span class="o">/</span>
-    <span class="n">validators</span><span class="o">/</span>
-    <span class="n">app</span><span class="p">.</span><span class="n">ts</span>
-    <span class="n">server</span><span class="p">.</span><span class="n">ts</span>
-<span class="n">test</span><span class="o">/</span>                    <span class="p">.............</span>     <span class="o">#</span> <span class="n">unit</span> <span class="n">tests</span>        
-    <span class="n">controllers</span><span class="o">/</span>
-<span class="n">Dockerfile</span>          
-<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">yaml</span>
-<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">yaml</span>
-<span class="n">LICENSE</span>
-<span class="n">nodemon</span><span class="p">.</span><span class="n">json</span>
-<span class="n">package</span><span class="p">.</span><span class="n">json</span>
-<span class="n">package</span><span class="o">-</span><span class="k">lock</span><span class="p">.</span><span class="n">json</span>
-<span class="n">swaggerDoc</span><span class="p">.</span><span class="n">js</span>
-<span class="n">tsconfig</span><span class="p">.</span><span class="n">json</span>
-<span class="n">tslint</span><span class="p">.</span><span class="n">json</span>
+<div class="codehilite"><pre><span></span><code><span class="err">src/                      .............     # source code</span>
+<span class="err">    config/</span>
+<span class="err">    controllers/</span>
+<span class="err">    database/</span>
+<span class="err">        interactions/</span>
+<span class="err">        models/</span>
+<span class="err">    interfaces/</span>
+<span class="err">    routes/</span>
+<span class="err">    util/</span>
+<span class="err">    validators/</span>
+<span class="err">    app.ts</span>
+<span class="err">    server.ts</span>
+<span class="err">test/                    .............     # unit tests        </span>
+<span class="err">    controllers/</span>
+<span class="err">Dockerfile          </span>
+<span class="err">docker-compose.yaml</span>
+<span class="err">docker-compose.test.yaml</span>
+<span class="err">LICENSE</span>
+<span class="err">nodemon.json</span>
+<span class="err">package.json</span>
+<span class="err">package-lock.json</span>
+<span class="err">swaggerDoc.js</span>
+<span class="err">tsconfig.json</span>
+<span class="err">tslint.json</span>
 </code></pre></div>
 
 
@@ -481,6 +480,8 @@
 <h3 id="for-development">For Development</h3>
 <p><strong>Requirements</strong></p>
 <ul>
+<li><a href="https://cloud.google.com/sdk/install"><code>gcloud</code></a></li>
+<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/"><code>kubectl</code></a></li>
 <li><a href="https://www.docker.com/"><code>docker</code></a></li>
 <li><a href="https://docs.docker.com/compose/"><code>docker-compose</code></a></li>
 </ul>
@@ -524,8 +525,37 @@
 </tbody>
 </table>
 <p><strong>Running</strong></p>
+<ol>
+<li>Login to a gcloud account that has access to our cluster on GKE</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>$ gcloud auth login &lt;EMAIL&gt;
+</code></pre></div>
+
+
+<ol>
+<li>Connect to our wisp-prod cluster</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>$ gcloud container clusters get-credentials wisp-prod --zone northamerica-northeast1-c --project wisp-276819
+</code></pre></div>
+
+
+<ol>
+<li>Use port forwarding to get access to the problems microservice (this will keep running in foreground by default)</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># we don&#39;t currently have a dev namespace so prod will be used intermittently</span>
+$ kubectl port-forward -n prod deploy/wisp-problems <span class="m">3001</span>:3000
+</code></pre></div>
+
+
+<p>NOTE: steps 1 through 3 can be skipped by running a local copy of the problems microservice with docker or node (keep in mind that the default mongodb url for the problems microservice is mongodb://mongo:27017)</p>
+<ol>
+<li>
 <p>Clone the <a href="https://github.com/Compete-McGill/wisp-users-microservice">repository</a>, and navigate to the root of the project.</p>
-<p>Then run:</p>
+</li>
+<li>
+<p>run:</p>
+</li>
+</ol>
 <div class="codehilite"><pre><span></span><code>npm i
 npm start
 </code></pre></div>
@@ -558,7 +588,7 @@ npm start
 <tbody>
 <tr>
 <td>200</td>
-<td><code>{"token": "jwt token"}</code></td>
+<td><code>{"token": "jwt token", "user": {...}}</code></td>
 </tr>
 <tr>
 <td>400</td>
@@ -607,39 +637,40 @@ npm start
 <blockquote>
 <p>Model</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span>
-    <span class="n">username</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-    <span class="n">email</span><span class="p">:</span> <span class="n">String</span>
-    <span class="n">password</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-    <span class="k">role</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-    <span class="n">info</span><span class="p">:</span> <span class="err">{</span>
-        <span class="n">major</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-        <span class="k">year</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-        <span class="n">school</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-        <span class="n">bio</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-        <span class="n">profilePhoto</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-    <span class="err">}</span><span class="p">,</span>
-    <span class="n">problems</span><span class="p">:</span> <span class="p">[</span>
-        <span class="err">{</span>
-            <span class="n">problemId</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-            <span class="n">isComplete</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">,</span>
-            <span class="n">status</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-        <span class="err">}</span><span class="p">,</span>
-    <span class="p">],</span>
-    <span class="n">platformData</span><span class="p">:</span> <span class="err">{</span>
-        <span class="n">codeforces</span><span class="p">:</span> <span class="err">{</span>
-            <span class="n">username</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-            <span class="n">email</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-            <span class="n">lastSubmission</span><span class="p">:</span> <span class="err">{</span>
-                <span class="n">problemId</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-                <span class="n">isComplete</span><span class="p">:</span> <span class="nb">Boolean</span><span class="p">,</span>
-                <span class="n">status</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
-            <span class="err">}</span><span class="p">,</span>
-        <span class="err">}</span><span class="p">,</span>
-    <span class="err">}</span><span class="p">,</span>
-    <span class="n">createdAt</span><span class="p">:</span> <span class="nb">Date</span><span class="p">,</span>
-    <span class="n">updatedAt</span><span class="p">:</span> <span class="nb">Date</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span><span class="w"></span>
+<span class="w">    </span><span class="nl">username</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">email</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="w"></span>
+<span class="w">    </span><span class="nl">password</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">role</span><span class="err">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">info</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">        </span><span class="nl">major</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nf">year</span><span class="err">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nl">school</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nl">bio</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nl">profilePhoto</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">problemSets</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">ObjectId</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">problems</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n"></span>
+<span class="n">        {</span>
+<span class="n">            problemId: String,</span>
+<span class="n">            isComplete: Boolean,</span>
+<span class="n">            status: String,</span>
+<span class="n">        },</span>
+<span class="n">    </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">platformData</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">        </span><span class="nl">codeforces</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">            </span><span class="nl">username</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nl">email</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nl">lastSubmission</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">                </span><span class="nl">problemId</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nl">isComplete</span><span class="p">:</span><span class="w"> </span><span class="k">Boolean</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nl">status</span><span class="p">:</span><span class="w"> </span><span class="n">String</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">createdAt</span><span class="p">:</span><span class="w"> </span><span class="nc">Date</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">updatedAt</span><span class="p">:</span><span class="w"> </span><span class="nc">Date</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
 </code></pre></div>
 
 
@@ -816,7 +847,7 @@ npm start
 </ul>
 <p><strong>Body</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;problemId&quot;</span><span class="p">:</span> <span class="s2">&quot;OnjectId&quot;</span>
+    <span class="nt">&quot;problemId&quot;</span><span class="p">:</span> <span class="s2">&quot;ObjectId&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -857,7 +888,7 @@ npm start
 </ul>
 <p><strong>Body</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;problemSetId&quot;</span><span class="p">:</span> <span class="s2">&quot;OnjectId&quot;</span>
+    <span class="nt">&quot;problemSetId&quot;</span><span class="p">:</span> <span class="s2">&quot;ObjectId&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -972,15 +1003,15 @@ npm start
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
