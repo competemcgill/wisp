@@ -22,7 +22,7 @@ services:
       - NODE_ENV=dev
       - DB_URL=mongodb://mongo:27017
       - SECRET=Ks10daK3g
-      - WISP_PROBLEMS_URL=http://wisp-users:3000
+      - WISP_PROBLEMS_URL=http://wisp-problems:3000
     ports:
       - 3002:3000
     links:
