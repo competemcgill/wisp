@@ -6,7 +6,7 @@ services:
     logging:
       driver: none
   wisp-problems:
-    image: competemcgill/wisp-problems:latest
+    image: competemcgill/wisp-problems:dev-latest
     container_name: wisp-problems
     environment:
       - NODE_ENV=dev
@@ -16,7 +16,7 @@ services:
     links:
       - mongo
   wisp-users:
-    image: competemcgill/wisp-users:latest
+    image: competemcgill/wisp-users:dev-latest
     container_name: wisp-users
     environment:
       - NODE_ENV=dev
