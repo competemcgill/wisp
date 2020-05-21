@@ -35,14 +35,3 @@ services:
     links:
       - wisp-users
       - wisp-problems
-  wisp-ui:
-    image: competemcgill/wisp-ui:latest
-    container_name: wisp-ui
-    environment:
-      - VUE_APP_WISP_API_URL=http://localhost:3000
-    ports:
-      - 80:80
-    links:
-      - wisp-gateway
-      - wisp-users
-      - wisp-problems
