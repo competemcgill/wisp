@@ -3,8 +3,8 @@ module.exports = {
 		return extension ? this.api.launchUrl + extension : this.api.launchUrl;
 	},
 	elements: {
-		searchBar: 'input[type=text]',
-		submit: 'input[name=btnK]',
-		pageName: 'div[class=v-card__title]'
+		email: 'input[name=email]',
+		password: 'input[name=password]',
+		loginBtn: 'button[type=button]',
 	}
 }
