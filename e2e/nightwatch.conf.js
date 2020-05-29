@@ -19,6 +19,7 @@ module.exports = {
   // See https://nightwatchjs.org/guide/#external-globals
   globals_path : '',
 
+
   test_settings: {
     default: {
       disable_error_log: false,
@@ -31,13 +32,14 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'chrome'
+        browserName : 'firefox'
       },
 
       webdriver: {
         start_process: true,
-        "server_path": "node_modules/.bin/chromedriver",
-        "port": 9515
+        "server_path": "node_modules/.bin/geckodriver",
+        "port": 9515,
+        start_process: true
       }
     },
 
