@@ -8,13 +8,13 @@ start-api:
 start-problems:
 	@echo "Starting local problems server..."
 	@echo "Problems API: http://localhost:3001"
-	@docker-compose up --scale --scale wisp-gateway=0 --scale wisp-users=0
+	@docker-compose up --scale wisp-gateway=0 --scale wisp-users=0
 
 start-users:
 	@echo "Starting local users server..."
 	@echo "Problems API: http://localhost:3001"
 	@echo "Users API: http://localhost:3002"
-	@docker-compose up --scale --scale wisp-gateway=0
+	@docker-compose up --scale wisp-gateway=0
 
 forward-problems:
 	@echo "Forwarding port 3001 to problems microservice..."
