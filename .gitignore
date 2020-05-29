@@ -1,5 +1,5 @@
 .DS_Store
-e2e_tests/node_modules
+e2e/node_modules
 /dist
 
 # local env files
@@ -7,9 +7,9 @@ e2e_tests/node_modules
 .env.*.local
 
 # Nightwatch test log files
-e2e_tests/reports
-e2e_tests/tests_output
-e2e_tests/*.log
+e2e/reports
+e2e/tests_output
+e2e/*.log
 
 # Log files
 npm-debug.log*
