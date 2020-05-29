@@ -20,6 +20,6 @@ npm run e2e
 
 ## Resources for contribution to e2e tests:
 
-* [Nightwatch API] (https://nightwatchjs.org/api)
-* [Working with Page Objects] (https://nightwatchjs.org/guide/working-with-page-objects/)
-* [Update configuration/settings file] (https://nightwatchjs.org/gettingstarted/configuration/)
+* [Nightwatch API](https://nightwatchjs.org/api)
+* [Working with Page Objects](https://nightwatchjs.org/guide/working-with-page-objects/)
+* [Update configuration/settings file](https://nightwatchjs.org/gettingstarted/configuration/)
