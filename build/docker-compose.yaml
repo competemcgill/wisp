@@ -10,7 +10,7 @@ services:
     container_name: wisp-problems
     environment:
       - NODE_ENV=dev
-      - DB_URL=mongodb://mongo:27017
+      - DB_URL=mongodb://mongo:27017/wisp
     ports:
       - 3001:3000
     links:
@@ -20,7 +20,7 @@ services:
     container_name: wisp-users
     environment:
       - NODE_ENV=dev
-      - DB_URL=mongodb://mongo:27017
+      - DB_URL=mongodb://mongo:27017/wisp
       - SECRET=Ks10daK3g
       - WISP_PROBLEMS_URL=http://wisp-problems:3000
     ports:
