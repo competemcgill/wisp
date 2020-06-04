@@ -4,9 +4,9 @@ This project is developed by Competitive Programming McGill.
 
 WISP is a project aimed at creating a fluid and fun experience for members of Compete McGill to learn competitive programming.
 
-You can find WISP **hosted** [**here**](http://wisp.compete-mcgill.ca).
+You can find WISP **hosted** [**here**](http://wisp.training).
 
-And you can find our **documentation** [**here**](https://docs.wisp.compete-mcgill.ca).
+And you can find our **documentation** [**here**](https://docs.wisp.training).
 
 ## Components
 The repositories that make up this application can be found at these repositories:
