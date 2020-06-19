@@ -2,7 +2,8 @@
   "name": "e2e_tests",
   "version": "1.0.0",
   "scripts": {
-    "e2e": "nightwatch --config nightwatch.conf.js"
+    "e2e-local": "nightwatch --config nightwatch.conf.js",
+    "e2e": "docker-compose up"
   },
   "dependencies": {},
   "devDependencies": {
