@@ -1,0 +1,41 @@
+on:
+  push:
+    paths:
+    - "e2e/**"
+    branches:
+    - master
+
+# Environment variables available to all jobs and steps in this workflow
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }} 
+  IMAGE: wisp-e2e
+
+jobs:
+  e2e:
+    name: e2e
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checkout Commit
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Build the Docker image
+    - name: Build
+      run: |        
+        docker build -t "$DOCKER_ORGANIZATION"/"$IMAGE":$(echo ${GITHUB_SHA} | cut -c1-8) .
+    
+    # Tag the Docker image
+    - name: Tag
+      run: |
+        docker tag "$DOCKER_ORGANIZATION"/"$IMAGE":$(echo ${GITHUB_SHA} | cut -c1-8) "$DOCKER_ORGANIZATION"/"$IMAGE":latest
+
+    # Push the Docker image to Dockerhub
+    - name: Publish
+      run: |
+        docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD 
+        docker push $DOCKER_ORGANIZATION/$IMAGE
+      env:
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
