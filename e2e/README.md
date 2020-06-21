@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-* [Selenium-driver](https://www.selenium.dev/documentation/en/webdriver/)
+* [Selenium-driver](https://www.selenium.dev/documentation/en/webdriver)
 * [nightwatch](https://nightwatchjs.org/guide)
 * [chromedriver (Should match browser version)](https://chromedriver.chromium.org/getting-started)
 
