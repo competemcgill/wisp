@@ -1,6 +1,3 @@
-const Services = {}; 
-loadServices();
-
 module.exports = {
   src_folders: ['tests'],
 
@@ -18,41 +15,19 @@ module.exports = {
 
     test_settings: {
       default: {
-        launch_url: 'https://dev.wisp.training'
+        launch_url: 'https://dev.wisp.training',
+        selenium_port  : 4444,
+        selenium_host  : "selenium-hub"
       },
       chrome : {
         desiredCapabilities: {
           browserName: "chrome"
-        },
-        webdriver: {
-          start_process: true,
-          server_path: "node_modules/.bin/chromedriver",
-          port: 9515
         }
       },
       firefox : {
         desiredCapabilities: {
           browserName: "firefox"
-        },
-        webdriver: {
-          start_process: true,
-          server_path: "node_modules/.bin/geckodriver",
-          port: 9515
         }
-      },
+      }
     }
 };
-
-function loadServices() {
-  try {
-    Services.seleniumServer = require('selenium-server');
-  } catch (err) {}
-
-  try {
-    Services.chromedriver = require('chromedriver');
-  } catch (err) {}
-
-  try {
-    Services.geckodriver = require('geckodriver');
-  } catch (err) {}
-}
