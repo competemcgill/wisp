@@ -10,7 +10,6 @@ COPY package.* ./
 RUN npm install
 
 COPY . .
-# RUN chmod +x start-e2e.sh
+RUN chmod +x start-e2e.sh
 
-# CMD ["./start-e2e.sh"]
-CMD ["npm", "run", "e2e-local"]
+CMD ["./start-e2e.sh"]
