@@ -2,15 +2,33 @@
   "name": "e2e_tests",
   "version": "1.0.0",
   "scripts": {
-    "e2e-local": "nightwatch -e chrome,firefox -c nightwatch.conf.js",
-    "e2e-docker": "nightwatch -e chrome,firefox -c nightwatch-docker.conf.js",
-    "e2e": "docker-compose up --abort-on-container-exit"
+    "build:image": "docker build -t competemcgill/wisp-e2e:latest .",
+    "e2e:local": "nightwatch -e chrome,firefox -c nightwatch.conf.js",
+    "e2e:docker": "nightwatch -e chrome,firefox -c nightwatch-docker.conf.js",
+    "e2e": "docker-compose up --abort-on-container-exit",
+    "format": "eslint --fix --max-warnings 0 '**/*.js'",
+    "lint": "eslint --max-warnings 0 '**/*.js'"
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "chromedriver": "^83.0.0",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "geckodriver": "^1.19.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "nightwatch": "^1.3.5",
+    "prettier": "^2.0.5",
     "selenium-server": "^3.141.59"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": "npm run format"
   }
 }

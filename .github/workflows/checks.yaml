@@ -1,0 +1,21 @@
+name: Lint, Test
+
+on:
+  pull_request:
+    paths:
+      - "e2e/**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci --prefix ./e2e
+      - run: npm run lint --prefix ./e2e
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci --prefix ./e2e
+      - run: npm run build:image --prefix ./e2e
+      - run: npm run e2e --prefix ./e2e
