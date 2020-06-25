@@ -10,14 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd e2e
-      - run: npm ci
-      - run: npm run lint
+      - run: npm ci --prefix ./e2e
+      - run: npm run lint --prefix ./e2e
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd e2e
-      - run: npm ci
-      - run: npm run build:image
-      - run: npm run e2e
+      - run: npm ci --prefix ./e2e
+      - run: npm run build:image --prefix ./e2e
+      - run: npm run e2e --prefix ./e2e
