@@ -23,7 +23,7 @@ services:
       - HUB_PORT_4444_TCP_PORT=4444
 
   e2e:
-    image: competemcgill/wisp-e2e
+    image: competemcgill/wisp-e2e:latest
     container_name: e2e
     links:
       - selenium-hub

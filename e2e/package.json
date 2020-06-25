@@ -2,7 +2,7 @@
   "name": "e2e_tests",
   "version": "1.0.0",
   "scripts": {
-    "build:image": "docker build -t competemcgill/wisp-e2e .",
+    "build:image": "docker build -t competemcgill/wisp-e2e:latest .",
     "e2e:local": "nightwatch -e chrome,firefox -c nightwatch.conf.js",
     "e2e:docker": "nightwatch -e chrome,firefox -c nightwatch-docker.conf.js",
     "e2e": "docker-compose up --abort-on-container-exit",
