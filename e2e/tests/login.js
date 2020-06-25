@@ -7,6 +7,7 @@ module.exports = {
 		.setValue('@email', 'test@gmail.com')
 		.setValue('@password', 'test')
 		.click('@loginBtn')
+		.pause(5000)
 		.waitForElementVisible('main')
 		.assert.containsText('.dashboard', 'My Sets')
 		browser.end();
