@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
-      - run: npm run lint
+      - run: e2e/npm ci
+      - run: e2e/npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
-      - run: npm run build:image
-      - run: npm run e2e
+      - run: e2e/npm ci
+      - run: e2e/npm run build:image
+      - run: e2e/npm run e2e
