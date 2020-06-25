@@ -20,9 +20,10 @@ The end-to-end nightwatch tests are run in headless mode using a [selenium grid]
 npm install
 ```
 
-* To run the tests in a docker environment (using selenium grid):
+* To run the tests locally in a docker environment (using selenium grid):
 ```bash
-npm run e2e
+- npm run build:image
+- npm run e2e
 ```
 
 * To run the tests on local host:

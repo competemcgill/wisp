@@ -1,3 +1,3 @@
 #!/bin/bash
 sleep 10
-npm run e2e-docker
+npm run e2edocker

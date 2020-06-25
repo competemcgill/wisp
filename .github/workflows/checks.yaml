@@ -1,0 +1,21 @@
+name: Lint, Test
+
+on:
+  pull_request:
+    paths:
+      - "e2e/**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm run lint
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm run build:image
+      - run: npm run e2e
