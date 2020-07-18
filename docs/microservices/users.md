@@ -25,7 +25,7 @@ npm i
 npm start
 ```
 
-see `npm start` in Available Commands
+see `npm start` in [Available Commands](../general#available-commands)
 
 ## API Documentation
 
@@ -61,7 +61,7 @@ For a more extensive documentation, visit the swagger docs
 
 **Params**
 
-* token: JWT token to introspect
+* `token`: JWT token to introspect
 
 **Responses**
 
@@ -78,7 +78,7 @@ For a more extensive documentation, visit the swagger docs
 
 > Model
 
-```
+```javascript
 {
     username: String,
     email: String
@@ -132,7 +132,7 @@ For a more extensive documentation, visit the swagger docs
 
 **Params**
 
-* userId: ID for user to fetch
+* `userId`: ID for user to fetch
 
 **Responses**
 
@@ -166,7 +166,7 @@ See user model
 
 **Params**
 
-* userId: ID for user to update
+* `userId`: ID for user to update
 
 **Body**
 
@@ -178,7 +178,7 @@ See user model
 | --- | --- |
 | 200 | User |
 | 404 | User not found |
-| 422 | Missing or invalid userId/params in body |
+| 422 | Missing or invalid userId or body |
 | 500 | Internal server error |
 
 <br>
@@ -187,7 +187,7 @@ See user model
 
 **Params**
 
-* userId: ID for user to delete
+* `userId`: ID for user to delete
 
 **Responses**
 
@@ -204,7 +204,7 @@ See user model
 
 **Params**
 
-* userId: ID for user to update
+* `userId`: ID for user to update
 
 **Body**
 
@@ -227,7 +227,7 @@ See user model
 
 **Params**
 
-* userId: ID for user to update
+* `userId`: ID for user to update
 
 **Body**
 

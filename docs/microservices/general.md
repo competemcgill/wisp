@@ -16,8 +16,8 @@
         index.md  # This documentation page.
         ...       # Other markdown pages, images and other files.
     test/
-      unit/
-      util/
+        unit/
+        util/
     chart/
     Dockerfile
     docker-compose.yaml
@@ -39,7 +39,7 @@
 * [`docker`](https://www.docker.com/)
 * [`docker-compose`](https://docs.docker.com/compose/)
 
-**Available Commands**
+#### Available Commands
 
 The following commands are standardized among API microservices to ensure consistency. All microservice repos use these commands:
 
