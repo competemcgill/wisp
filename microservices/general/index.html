@@ -11,7 +11,7 @@
         <meta name="description" content="A training platform for competitive programming">
       
       
-        <link rel="canonical" href="https://docs.wisp.compete-mcgill.ca/microservices/users/">
+        <link rel="canonical" href="https://docs.wisp.compete-mcgill.ca/microservices/general/">
       
       
       <link rel="shortcut icon" href="../../img/cp-logo.svg">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Users - WISP</title>
+        <title>General Usage - WISP</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#users" class="md-skip">
+        <a href="#project-layout" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Users
+              General Usage
             
           </span>
         </div>
@@ -239,11 +239,75 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../general/" title="General Usage" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        General Usage
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="General Usage" class="md-nav__link md-nav__link--active">
       General Usage
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+    <nav class="md-nav" aria-label="Project layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-development" class="md-nav__link">
+    For Development
+  </a>
+  
+    <nav class="md-nav" aria-label="For Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-commands" class="md-nav__link">
+    Available Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -263,73 +327,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Users
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Users" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../users/" title="Users" class="md-nav__link">
       Users
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api-documentation" class="md-nav__link">
-    API Documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="API Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#auth" class="md-nav__link">
-    Auth
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#users_1" class="md-nav__link">
-    Users
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -352,8 +354,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -364,24 +364,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-documentation" class="md-nav__link">
-    API Documentation
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
   </a>
   
-    <nav class="md-nav" aria-label="API Documentation">
+    <nav class="md-nav" aria-label="Project layout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#auth" class="md-nav__link">
-    Auth
+  <a href="#for-development" class="md-nav__link">
+    For Development
+  </a>
+  
+    <nav class="md-nav" aria-label="For Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-commands" class="md-nav__link">
+    Available Commands
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#users_1" class="md-nav__link">
-    Users
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -406,363 +412,100 @@
                   
                 
                 
-                <h1 id="users">Users</h1>
-<p>The purpose of this microservice is to manage all logic relating to users and to privide OAuth2.0-compliant authorization endpoints. Since WISP allows users to solve problems across multiple sites (such as Codeforces and Katis), it is this microservice's role to collect and keep the user's information in-sync across all sites.</p>
-<h2 id="api-documentation">API Documentation</h2>
-<p>For a more extensive documentation, visit the swagger docs</p>
-<h3 id="auth">Auth</h3>
-<p><br></p>
-<blockquote>
-<p>POST /auth/login</p>
-</blockquote>
-<p><strong>Body</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;example@gmail.com&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
-<span class="p">}</span>
+                  <h1>General Usage</h1>
+                
+                <h2 id="project-layout">Project layout</h2>
+<div class="codehilite"><pre><span></span><code><span class="err">src/    # Contains all source code</span>
+<span class="err">    config/</span>
+<span class="err">    controllers/</span>
+<span class="err">    database/</span>
+<span class="err">        interactions/</span>
+<span class="err">        models/</span>
+<span class="err">    interfaces/</span>
+<span class="err">    routes/</span>
+<span class="err">    util/</span>
+<span class="err">    validators/</span>
+<span class="err">    app.ts</span>
+<span class="err">    server.ts</span>
+<span class="err">docs/</span>
+<span class="err">    index.md  # This documentation page.</span>
+<span class="err">    ...       # Other markdown pages, images and other files.</span>
+<span class="err">test/</span>
+<span class="err">    unit/</span>
+<span class="err">    util/</span>
+<span class="err">chart/</span>
+<span class="err">Dockerfile</span>
+<span class="err">docker-compose.yaml</span>
+<span class="err">mkdocs.yml    # Configuration for these docs</span>
+<span class="err">LICENSE</span>
+<span class="err">nodemon.json</span>
+<span class="err">package.json</span>
+<span class="err">package-lock.json</span>
+<span class="err">swaggerDoc.js</span>
+<span class="err">tsconfig.json</span>
+<span class="err">tslint.json</span>
 </code></pre></div>
 
 
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td><code>{"token": "jwt token", "user": {...}}</code></td>
-</tr>
-<tr>
-<td>400</td>
-<td>Invalid email or passowrd</td>
-</tr>
-<tr>
-<td>422</td>
-<td>Missing or invalid email/password</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<blockquote>
-<p>POST /auth/introspect</p>
-</blockquote>
-<p><strong>Params</strong></p>
+<h3 id="for-development">For Development</h3>
+<p><strong>Requirements</strong></p>
 <ul>
-<li><code>token</code>: JWT token to introspect</li>
+<li><a href="https://www.docker.com/"><code>docker</code></a></li>
+<li><a href="https://docs.docker.com/compose/"><code>docker-compose</code></a></li>
 </ul>
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td><code>{"active": true, "user": {...}}</code></td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<h3 id="users_1">Users</h3>
-<p><br></p>
-<blockquote>
-<p>Model</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nx">username</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-    <span class="nx">email</span><span class="o">:</span> <span class="nb">String</span>
-    <span class="nx">password</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-    <span class="nx">role</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-    <span class="nx">info</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">major</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-        <span class="nx">year</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-        <span class="nx">school</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-        <span class="nx">bio</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-        <span class="nx">profilePhoto</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="nx">problemSets</span><span class="o">:</span> <span class="p">[</span><span class="nx">ObjectId</span><span class="p">],</span>
-    <span class="nx">problems</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nx">problemId</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-            <span class="nx">isComplete</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
-            <span class="nx">status</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">],</span>
-    <span class="nx">platformData</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">codeforces</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">username</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-            <span class="nx">email</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-            <span class="nx">lastSubmission</span><span class="o">:</span> <span class="p">{</span>
-                <span class="nx">problemId</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-                <span class="nx">isComplete</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
-                <span class="nx">status</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-            <span class="p">},</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="nx">createdAt</span><span class="o">:</span> <span class="nb">Date</span><span class="p">,</span>
-    <span class="nx">updatedAt</span><span class="o">:</span> <span class="nb">Date</span>
-<span class="p">}</span>
+<p><strong>Running locally</strong></p>
+<p>The problems microservice does not depend on any other microservice to be running simultaneously.</p>
+<ol>
+<li>
+<p>Clone the desired repository (each microservice can be found in <a href="https://github.com/Compete-McGill/wisp">this README</a>).</p>
+</li>
+<li>
+<p>Then navigate locally to the root of the repo and run:</p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>npm install
+npm start
 </code></pre></div>
 
 
-<p><br></p>
-<blockquote>
-<p>GET /users</p>
-</blockquote>
-<p><strong>Responses</strong></p>
+<p>see <code>npm start</code> in <a href="#available-commands">Available Commands</a></p>
+<h4 id="available-commands">Available Commands</h4>
+<p>The following commands are standardized among API microservices to ensure consistency. All microservice repos use these commands:</p>
 <table>
 <thead>
 <tr>
-<th>Status</th>
-<th>Response</th>
+<th>Command</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>200</td>
-<td>Array of users</td>
+<td><code>npm start</code></td>
+<td>spins up a MongoDB instance as well as your API server through docker-compose (see <code>docker-compose.yaml</code>). Be sure that ports 27017 and 3000 are unused by other services</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<blockquote>
-<p>GET /users/{userId}</p>
-</blockquote>
-<p><strong>Params</strong></p>
-<ul>
-<li><code>userId</code>: ID for user to fetch</li>
-</ul>
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>User</td>
+<td><code>npm run start:local</code></td>
+<td>runs a nodemon server that listens for changes in the src directory (requires <code>nodemon</code> and <code>ts-node</code>)</td>
 </tr>
 <tr>
-<td>404</td>
-<td>User not found</td>
+<td><code>npm run start:prod</code></td>
+<td>starts the API server in the production env. Must be run after <code>npm run build</code> (requires <code>node</code> and <code>tsc</code>)</td>
 </tr>
 <tr>
-<td>422</td>
-<td>Missing or invalid userId</td>
+<td><code>npm run test</code></td>
+<td>runs unit tests on new instances of MongoDB and the API (see <code>docker-compose.test.yaml</code>). Once the tests finish running, both instances stop</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<blockquote>
-<p>POST /users</p>
-</blockquote>
-<p><strong>Body</strong></p>
-<p>See user model</p>
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>User</td>
+<td><code>npm run test:local</code></td>
+<td>runs unit tests without docker and MongoDB (requires <code>nyc</code>, <code>mocha</code>, and <code>ts-node</code>)</td>
 </tr>
 <tr>
-<td>400</td>
-<td>User already exists</td>
+<td><code>npm run build</code></td>
+<td>builds the API for production and outputs the result in <code>dist/</code> (requires <code>tsc</code>)</td>
 </tr>
 <tr>
-<td>422</td>
-<td>Missing or invalid params in body</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<blockquote>
-<p>PUT /users/{userId}</p>
-</blockquote>
-<p><strong>Params</strong></p>
-<ul>
-<li><code>userId</code>: ID for user to update</li>
-</ul>
-<p><strong>Body</strong></p>
-<p>See user model</p>
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>User</td>
-</tr>
-<tr>
-<td>404</td>
-<td>User not found</td>
-</tr>
-<tr>
-<td>422</td>
-<td>Missing or invalid userId or body</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<blockquote>
-<p>DELETE /users/{userId}</p>
-</blockquote>
-<p><strong>Params</strong></p>
-<ul>
-<li><code>userId</code>: ID for user to delete</li>
-</ul>
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>Empty</td>
-</tr>
-<tr>
-<td>404</td>
-<td>User not found</td>
-</tr>
-<tr>
-<td>422</td>
-<td>Missing or invalid userId</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<blockquote>
-<p>PATCH /users/{userId}/problems</p>
-</blockquote>
-<p><strong>Params</strong></p>
-<ul>
-<li><code>userId</code>: ID for user to update</li>
-</ul>
-<p><strong>Body</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;problemId&quot;</span><span class="p">:</span> <span class="s2">&quot;ObjectId&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>User</td>
-</tr>
-<tr>
-<td>404</td>
-<td>User not found</td>
-</tr>
-<tr>
-<td>422</td>
-<td>Missing or invalid userId/problemId in body</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal server error</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>PATCH /users/{userId}/problemSets</p>
-</blockquote>
-<p><strong>Params</strong></p>
-<ul>
-<li><code>userId</code>: ID for user to update</li>
-</ul>
-<p><strong>Body</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;problemSetId&quot;</span><span class="p">:</span> <span class="s2">&quot;ObjectId&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-
-<p><strong>Responses</strong></p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>User</td>
-</tr>
-<tr>
-<td>404</td>
-<td>User not found</td>
-</tr>
-<tr>
-<td>422</td>
-<td>Missing or invalid userId/problemSetId in body</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal server error</td>
+<td><code>npm run lint</code></td>
+<td>lints the src directory according to <code>tslint.json</code> and <code>tsconfig.json</code></td>
 </tr>
 </tbody>
 </table>
@@ -784,7 +527,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../problems/" title="Problems" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../getting_started/" title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -793,11 +536,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Problems
+                Getting Started
               </div>
             </div>
           </a>
         
+        
+          <a href="../problems/" title="Problems" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Problems
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
