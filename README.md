@@ -16,4 +16,16 @@ The repositories that make up this application can be found at these repositorie
 * This repo (contains documentation and other centralized resources such as e2e tests and build files)
 
 ## Documentation
-This repository contains documentation using [mkdocs](https://www.mkdocs.org/) and hosts the documentation to Github Pages at [this URL](https://docs.wisp.training/). To update the documentation, make changes locally and view your changes live with `mkdocs serve`. Then, when you're done, merge to and checkout `master`, and then deploy these changes by running `mkdocs gh-deploy` locally.
+This repository contains documentation using [mkdocs](https://www.mkdocs.org/) and hosts the documentation to Github Pages at [this URL](https://docs.wisp.training/).
+
+Install `mkdocs` and the material theme with:
+```
+pip install mkdocs mkdocs-material
+```
+
+Then run a local development server for the docs by navigating to the root of this repo and running:
+```
+mkdocs serve
+```
+
+Then, when you're done making your changes, merge changes to `master` and checkout `master`, and then deploy these changes by running `mkdocs gh-deploy` locally.

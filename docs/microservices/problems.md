@@ -2,292 +2,239 @@
 
 Among other functionality, WISP hosts an evolving set of problems and problem sets for users to attempt, and tracks their progress. The purpose of this microservice is to manage all data and logic relating to these problems and problem sets.
 
-## Project layout
+## API Documentation
 
-    src/    # Contains all source code
-        config/
-        controllers/
-        database/
-            interactions/
-            models/
-        interfaces/
-        routes/
-        util/
-        validators/
-        app.ts
-        server.ts
-    docs/
-        index.md  # This documentation page.
-        ...       # Other markdown pages, images and other files.
-    Dockerfile          
-    docker-compose.yaml
-    mkdocs.yml    # Configuration for these docs
-    LICENSE
-    nodemon.json
-    package.json
-    package-lock.json
-    swaggerDoc.js
-    tsconfig.json
-    tslint.json
-
-## Getting Started
-
-### For Development
-
-**Requirements**
-
-* [`docker`](https://www.docker.com/)
-* [`docker-compose`](https://docs.docker.com/compose/)
-
-**Running**
-
-Clone the repository, and navigate to the root of the project.
-
-Then run:
-
-```bash
-npm start
-```
-
-### For Production
-
-**Requirements**
-
-* [`docker`](https://www.docker.com/)
-
-**Build**
-
-Clone the repository, and navigate to the root of the project.
-
-Then run:
-
-```bash
-docker build -t wisp-problems-microservice:latest
-```
-```bash
-docker run --rm -d -p 3000:3000 wisp-problems-microservice
-```
-
-
-## Sample Usage
+For a more extensive documentation, visit the swagger docs
 
 ### ProblemSets
 
-#### List all ProblemSets
+<br>
 
-**Query parameters**
+> Model
+
+```javascript
+{
+    title: String,
+    description: String,
+    tags: [String],
+    problemCount: Number
+}
+```
+
+<br>
+
+> GET /problemSets
+
+**Query params**
+
 * `includeProblems=true`: for each problem set returned, includes an array of problems belonging to that problem set as the field `problems`
 
-Request:
-```bash
-curl --request GET \
-  --url 'http://localhost:3000/problemSets'
-```
+**Responses**
 
-Response:
-```json
-[
-  {
-    "tags": [
-      "Graph Theory",
-      "Other Tag"
-    ],
-    "_id": "5eb855b2cf015c0062d71f88",
-    "title": "Test Problem Set 1",
-    "description": "This is a test problem set!",
-    "createdAt": "2020-05-10T19:27:46.233Z",
-    "updatedAt": "2020-05-10T19:27:46.233Z",
-    "__v": 0
-  }
-]
-```
+| Status | Response |
+| --- | --- |
+| 200 | Array of problemSets |
+| 500 | Internal server error |
 
-#### Get specific ProblemSet
+<br>
 
-**Query parameters**
+> GET /problemSets/{problemSetId}
+
+**Query params**
+
 * `includeProblems=true`: includes an array of problems belonging to the specified problem set as the field `problems`
 
-Request:
-```bash
-curl --request GET \
-  --url http://localhost:3000/problemSets/5eb855b2cf015c0062d71f88
-```
+**Params**
 
-Response:
-```json
-{
-    "tags": [
-        "Graph Theory",
-        "Other Tag"
-    ],
-    "_id": "5eb855b2cf015c0062d71f88",
-    "title": "Test Problem Set 1",
-    "description": "This is a test problem set!",
-    "createdAt": "2020-05-10T19:27:46.233Z",
-    "updatedAt": "2020-05-10T19:27:46.233Z",
-    "__v": 0
-}
-```
+* `problemSetId`: ID for problemSet to fetch
 
-#### Create ProblemSet
+**Responses**
 
-Request:
-```bash
-curl --request POST \
-  --url http://localhost:3000/problemSets \
-  --header 'content-type: application/json' \
-  --data '{
-	"title" : "Test Problem Set 1",
-	"description" : "This is a test problem set!",
-	"tags" : ["Graph Theory", "Other Tag"]
-}'
-```
+| Status | Response |
+| --- | --- |
+| 200 | ProblemSet |
+| 404 | ProblemSet not found |
+| 422 | Missing or invalid problemSetId |
+| 500 | Internal server error |
 
-Response:
-```json
-{
-    "tags": [
-        "Graph Theory",
-        "Other Tag"
-    ],
-    "_id": "5eb855b2cf015c0062d71f88",
-    "title": "Test Problem Set 1",
-    "description": "This is a test problem set!",
-    "createdAt": "2020-05-10T19:27:46.233Z",
-    "updatedAt": "2020-05-10T19:27:46.233Z",
-    "__v": 0
-}
-```
+<br>
+
+> POST /problemSets
+
+**Body**
+
+See ProblemSet model
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | ProblemSet |
+| 422 | Missing or invalid params in body |
+| 500 | Internal server error |
+
+<br>
+
+> PUT /problemSets/{problemSetId}
+
+**Params**
+
+* `problemSetId`: ID for problemSet to update
+
+**Body**
+
+See ProblemSet model
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | ProblemSet |
+| 404 | ProblemSet not found |
+| 422 | Missing or invalid problemSetId or body |
+| 500 | Internal server error |
+
+<br>
+
+> DELETE /problemSets/{problemSetId}
+
+**Params**
+
+* `problemSetId`: ID for problemSet to delete
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Empty |
+| 404 | ProblemSet not found |
+| 422 | Missing or invalid problemSetId |
+| 500 | Internal server error |
+
+<br>
 
 ### Problems
 
-#### List all Problems
+<br>
 
-Request:
-```bash
-curl --request GET \
-  --url http://localhost:3000/problems
-```
+> Model
 
-Response:
-```json
-[
-  {
-    "problemMetadata": {
-      "platformProblemId": "1352G",
-      "difficulty": "easy"
-    },
-    "problemSetIds": [
-      "5eb855b2cf015c0062d71f88"
-    ],
-    "_id": "5eb8570217271500be61b2c9",
-    "title": "Test Problem 1: Special Permutation",
-    "source": "CODEFORCES",
-    "sourceLink": "https://codeforces.com/problemset/problem/1352/G",
-    "problemId": "6e88ec57160cd8164d9460a9885fbece7047c13c",
-    "createdAt": "2020-05-10T19:33:22.888Z",
-    "updatedAt": "2020-05-10T19:33:22.888Z",
-    "__v": 0
-  }
-]
-```
-
-#### Get specific Problem
-
-Request:
-```bash
-curl --request GET \
-  --url http://localhost:3000/problems/5eb8570217271500be61b2c9
-```
-
-Response:
-```json
+```javascript
 {
-    "problemMetadata": {
-        "platformProblemId": "1352G",
-        "difficulty": "easy"
-    },
-    "problemSetIds": [
-        "5eb855b2cf015c0062d71f88"
-    ],
-    "_id": "5eb8570217271500be61b2c9",
-    "title": "Test Problem 1: Special Permutation",
-    "source": "CODEFORCES",
-    "sourceLink": "https://codeforces.com/problemset/problem/1352/G",
-    "problemId": "6e88ec57160cd8164d9460a9885fbece7047c13c",
-    "createdAt": "2020-05-10T19:33:22.888Z",
-    "updatedAt": "2020-05-10T19:33:22.888Z",
-    "__v": 0
+    title: String,
+    source: String,
+    problemId: String,
+    sourceLink: String,
+    problemSetIds: [String],
+    problemMetadata: {
+        platformProblemId: String,
+        difficulty: String
+    }
 }
 ```
 
-#### Create Problem
+NOTE: `problemId` is generated by the backend, and should not be included in POST/PUT requests
 
-Request:
-```bash
-curl --request POST \
-  --url http://localhost:3000/problems \
-  --header 'content-type: application/json' \
-  --data '{
-	"title": "Test Problem 1: Special Permutation",
-	"source":"CODEFORCES",
-    "sourceLink":"https://codeforces.com/problemset/problem/1352/G",
-	"problemSetIds": ["5eb855b2cf015c0062d71f88"],
-	"problemMetadata": {
-		"platformProblemId":"1352G",
-		"difficulty":"easy"
-	}
-}'
-```
+<br>
 
-Response:
-```json
-{
-    "problemSetIds": [
-        "5eb855b2cf015c0062d71f88"
-    ],
-    "_id": "5eb8570217271500be61b2c9",
-    "title": "Test Problem 1: Special Permutation",
-    "source": "CODEFORCES",
-    "sourceLink": "https://codeforces.com/problemset/problem/1352/G",
-    "problemMetadata": {
-        "platformProblemId": "1352G",
-        "difficulty": "easy"
-    },
-    "problemId": "6e88ec57160cd8164d9460a9885fbece7047c13c",
-    "createdAt": "2020-05-10T19:33:22.888Z",
-    "updatedAt": "2020-05-10T19:33:22.888Z",
-    "__v": 0
-}
-```
+> GET /problems
 
-#### Problems exists
+**Responses**
 
-The `id` that is used in this requests URL is a custom ID that can be generated by concatenating the platform ("CODEFORCES") and the problem ID as displayed on the platform ("1352G"), and then taking the SHA-1 hash of the resulting string.
+| Status | Response |
+| --- | --- |
+| 200 | Array of problems |
+| 500 | Internal server error |
 
-Request:
-```bash
-curl --request GET \
-  --url http://localhost:3000/problems/6e88ec57160cd8164d9460a9885fbece7047c13c/exists
-```
+<br>
 
-Response:
-```json
-{
-    "problemMetadata": {
-    "platformProblemId": "1352G",
-    "difficulty": "easy"
-    },
-    "problemSetIds": [
-    "5eb855b2cf015c0062d71f88"
-    ],
-    "_id": "5eb8570217271500be61b2c9",
-    "title": "Test Problem 1: Special Permutation",
-    "source": "CODEFORCES",
-    "sourceLink": "https://codeforces.com/problemset/problem/1352/G",
-    "problemId": "6e88ec57160cd8164d9460a9885fbece7047c13c",
-    "createdAt": "2020-05-10T19:33:22.888Z",
-    "updatedAt": "2020-05-10T19:33:22.888Z",
-    "__v": 0
-}
-```
+> GET /problems/{problemId}
+
+**Params**
+
+* `problemId`: ID for problem to fetch
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Problem |
+| 404 | Problem not found |
+| 422 | Missing or invalid problemId |
+| 500 | Internal server error |
+
+<br>
+
+> POST /problems
+
+**Body**
+
+See Problem model, but don't include `problemId` parameter in the body
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Problem |
+| 422 | Missing or invalid params in body |
+| 500 | Internal server error |
+
+<br>
+
+> PUT /problems/{problemId}
+
+**Params**
+
+* `problemId`: ID for problem to update
+
+**Body**
+
+See Problem model, but don't include `problemId` parameter in the body
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Problem |
+| 404 | Problem not found |
+| 422 | Missing or invalid problemId or body |
+| 500 | Internal server error |
+
+<br>
+
+> DELETE /problems/{problemId}
+
+**Params**
+
+* `problemId`: ID for problem to delete
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Empty |
+| 404 | Problem not found |
+| 422 | Missing or invalid problemId |
+| 500 | Internal server error |
+
+<br>
+
+> GET /problems/{problemId}/exists
+
+**Params**
+
+* `generatedProblemId`: ID for problem to fetch
+    * This `generatedProblemId` that is used in this requests URL is a custom ID that can be generated by the hash of platform name and number. This is as an alternative to using the Mongo ID, as the microservice needs to check the existance of problems using minimal information, without knowing the MongoID.
+        * Example: in the case of Codeforces problem, the `generatedProblemId` is created by concatenating the platform ("CODEFORCES") and the problem ID as displayed on the platform ("1352G"), and then taking the SHA-1 hash of the resulting string.
+    * This is the `problemId` from the Problem model (instead of the usual mongo ID)
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Problem |
+| 404 | Problem not found |
+| 422 | Missing or invalid generatedProblemId |
+| 500 | Internal server error |
+
+<br>

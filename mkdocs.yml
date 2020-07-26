@@ -10,6 +10,7 @@ nav:
     - Introduction: index.md
     - Getting Started: getting_started.md
     - Microservices:
+      - General Usage: microservices/general.md
       - Problems: microservices/problems.md
       - Users: microservices/users.md
 theme:
