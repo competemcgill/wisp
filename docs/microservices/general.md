@@ -34,10 +34,23 @@
 
 **Requirements**
 
-* [`gcloud`](https://cloud.google.com/sdk/install)
-* [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [`docker`](https://www.docker.com/)
 * [`docker-compose`](https://docs.docker.com/compose/)
+
+**Running locally**
+
+The problems microservice does not depend on any other microservice to be running simultaneously.
+
+1. Clone the desired repository (each microservice can be found in [this README](https://github.com/Compete-McGill/wisp)).
+
+2. Then navigate locally to the root of the repo and run:
+
+```bash
+npm install
+npm start
+```
+
+see `npm start` in [Available Commands](#available-commands)
 
 #### Available Commands
 

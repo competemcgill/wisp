@@ -2,31 +2,6 @@
 
 The purpose of this microservice is to manage all logic relating to users and to privide OAuth2.0-compliant authorization endpoints. Since WISP allows users to solve problems across multiple sites (such as Codeforces and Katis), it is this microservice's role to collect and keep the user's information in-sync across all sites.
 
-## For Development
-
-**Running locally**
-
-NOTE: steps 1 through 3 can be skipped by running a local copy of the problems microservice with `docker` or `node` (keep in mind that the default mongodb url for the problems microservice is `mongodb://mongo:27017`).
-
-1. Login to a [`gcloud`](https://cloud.google.com/sdk/docs/quickstarts) account using the terminal tool that has access to our cluster on GKE
-
-2. Connect to our wisp-prod cluster using `kubectl`
-    - `gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --project <project-name>`
-
-3. Use port forwarding to forward traffic on port 3001 to the problems microservice (this will keep running in foreground by default)
-    - Use commands from [this file](https://github.com/Compete-McGill/wisp/blob/master/build/Makefile) to port-forward
-
-4. Clone the [repository](https://github.com/Compete-McGill/wisp-users-microservice), and navigate to the root of the project.
-
-5. run:
-
-```bash
-npm i
-npm start
-```
-
-see `npm start` in [Available Commands](../general#available-commands)
-
 ## API Documentation
 
 For a more extensive documentation, visit the swagger docs
