@@ -37,6 +37,8 @@ For a more extensive documentation, visit the swagger docs
 **Params**
 
 * `token`: JWT token to introspect
+* `uri`: uri used in the request
+* `method`: HTTP method
 
 **Responses**
 
@@ -177,6 +179,8 @@ See user model
 
 > PATCH /users/{userId}/problems
 
+Appends problem to the user's list of problems
+
 **Params**
 
 * `userId`: ID for user to update
@@ -200,6 +204,8 @@ See user model
 
 > PATCH /users/{userId}/problemSets
 
+Appends problemSet to the user's list of problemSets
+
 **Params**
 
 * `userId`: ID for user to update
@@ -219,4 +225,15 @@ See user model
 | 200 | User |
 | 404 | User not found |
 | 422 | Missing or invalid userId/problemSetId in body |
+| 500 | Internal server error |
+
+> PATCH /users/resetLastSubmissions
+
+Resets the codeforces `lastSubmission` field for all users
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Empty |
 | 500 | Internal server error |
