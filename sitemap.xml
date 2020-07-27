@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.wisp.compete-mcgill.ca/</loc>
-     <lastmod>2020-07-26</lastmod>
+     <lastmod>2020-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.wisp.compete-mcgill.ca/getting_started/</loc>
-     <lastmod>2020-07-26</lastmod>
+     <lastmod>2020-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.wisp.compete-mcgill.ca/architecture/</loc>
+     <lastmod>2020-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.wisp.compete-mcgill.ca/microservices/general/</loc>
-     <lastmod>2020-07-26</lastmod>
+     <lastmod>2020-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.wisp.compete-mcgill.ca/microservices/problems/</loc>
-     <lastmod>2020-07-26</lastmod>
+     <lastmod>2020-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.wisp.compete-mcgill.ca/microservices/users/</loc>
-     <lastmod>2020-07-26</lastmod>
+     <lastmod>2020-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

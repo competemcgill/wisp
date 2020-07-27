@@ -11,21 +11,21 @@
         <meta name="description" content="A training platform for competitive programming">
       
       
-        <link rel="canonical" href="https://docs.wisp.compete-mcgill.ca/microservices/general/">
+        <link rel="canonical" href="https://docs.wisp.compete-mcgill.ca/architecture/">
       
       
-      <link rel="shortcut icon" href="../../img/cp-logo.svg">
+      <link rel="shortcut icon" href="../img/cp-logo.svg">
       <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
     
     
       
-        <title>General - WISP</title>
+        <title>Architecture - WISP</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b9ffd7b.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
       
       
         
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-layout" class="md-skip">
+        <a href="#diagram" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              General
+              Architecture
             
           </span>
         </div>
@@ -188,7 +188,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Introduction" class="md-nav__link">
+    <a href=".." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -200,20 +200,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting_started/" title="Getting Started" class="md-nav__link">
+    <a href="../getting_started/" title="Getting Started" class="md-nav__link">
       Getting Started
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../architecture/" title="Architecture" class="md-nav__link">
-      Architecture
     </a>
   </li>
 
@@ -225,9 +213,91 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Architecture
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Architecture" class="md-nav__link md-nav__link--active">
+      Architecture
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gateway" class="md-nav__link">
+    Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservices" class="md-nav__link">
+    Microservices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Microservices
@@ -249,75 +319,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        General
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="General" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../microservices/general/" title="General" class="md-nav__link">
       General
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-    <nav class="md-nav" aria-label="Project layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-development" class="md-nav__link">
-    For Development
-  </a>
-  
-    <nav class="md-nav" aria-label="For Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#available-commands" class="md-nav__link">
-    Available Commands
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -327,7 +333,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../problems/" title="Problems" class="md-nav__link">
+    <a href="../microservices/problems/" title="Problems" class="md-nav__link">
       Problems
     </a>
   </li>
@@ -339,7 +345,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../users/" title="Users" class="md-nav__link">
+    <a href="../microservices/users/" title="Users" class="md-nav__link">
       Users
     </a>
   </li>
@@ -374,30 +380,38 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#diagram" class="md-nav__link">
+    Diagram
   </a>
   
-    <nav class="md-nav" aria-label="Project layout">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-development" class="md-nav__link">
-    For Development
-  </a>
-  
-    <nav class="md-nav" aria-label="For Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#available-commands" class="md-nav__link">
-    Available Commands
+  <a href="#gateway" class="md-nav__link">
+    Gateway
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#microservices" class="md-nav__link">
+    Microservices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
   
 </li>
         
@@ -422,103 +436,23 @@
                   
                 
                 
-                  <h1>General</h1>
+                  <h1>Architecture</h1>
                 
-                <h2 id="project-layout">Project layout</h2>
-<div class="codehilite"><pre><span></span><code><span class="err">src/    # Contains all source code</span>
-<span class="err">    config/</span>
-<span class="err">    controllers/</span>
-<span class="err">    database/</span>
-<span class="err">        interactions/</span>
-<span class="err">        models/</span>
-<span class="err">    interfaces/</span>
-<span class="err">    routes/</span>
-<span class="err">    util/</span>
-<span class="err">    validators/</span>
-<span class="err">    app.ts</span>
-<span class="err">    server.ts</span>
-<span class="err">docs/</span>
-<span class="err">    index.md  # This documentation page.</span>
-<span class="err">    ...       # Other markdown pages, images and other files.</span>
-<span class="err">test/</span>
-<span class="err">    unit/</span>
-<span class="err">    util/</span>
-<span class="err">chart/</span>
-<span class="err">Dockerfile</span>
-<span class="err">docker-compose.yaml</span>
-<span class="err">mkdocs.yml    # Configuration for these docs</span>
-<span class="err">LICENSE</span>
-<span class="err">nodemon.json</span>
-<span class="err">package.json</span>
-<span class="err">package-lock.json</span>
-<span class="err">swaggerDoc.js</span>
-<span class="err">tsconfig.json</span>
-<span class="err">tslint.json</span>
-</code></pre></div>
-
-
-<h3 id="for-development">For Development</h3>
-<p><strong>Requirements</strong></p>
-<ul>
-<li><a href="https://www.docker.com/"><code>docker</code></a></li>
-<li><a href="https://docs.docker.com/compose/"><code>docker-compose</code></a></li>
-</ul>
-<p><strong>Running locally</strong></p>
-<p>The problems microservice does not depend on any other microservice to be running simultaneously.</p>
-<ol>
-<li>
-<p>Clone the desired repository (each microservice can be found in <a href="https://github.com/Compete-McGill/wisp">this README</a>).</p>
-</li>
-<li>
-<p>Then navigate locally to the root of the repo and run:</p>
-</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>npm install
-npm start
-</code></pre></div>
-
-
-<p>see <code>npm start</code> in <a href="#available-commands">Available Commands</a></p>
-<h4 id="available-commands">Available Commands</h4>
-<p>The following commands are standardized among API microservices to ensure consistency. All microservice repos use these commands:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>npm start</code></td>
-<td>spins up a MongoDB instance as well as your API server through docker-compose (see <code>docker-compose.yaml</code>). Be sure that ports 27017 and 3000 are unused by other services</td>
-</tr>
-<tr>
-<td><code>npm run start:local</code></td>
-<td>runs a nodemon server that listens for changes in the src directory (requires <code>nodemon</code> and <code>ts-node</code>)</td>
-</tr>
-<tr>
-<td><code>npm run start:prod</code></td>
-<td>starts the API server in the production env. Must be run after <code>npm run build</code> (requires <code>node</code> and <code>tsc</code>)</td>
-</tr>
-<tr>
-<td><code>npm run test</code></td>
-<td>runs unit tests on new instances of MongoDB and the API (see <code>docker-compose.test.yaml</code>). Once the tests finish running, both instances stop</td>
-</tr>
-<tr>
-<td><code>npm run test:local</code></td>
-<td>runs unit tests without docker and MongoDB (requires <code>nyc</code>, <code>mocha</code>, and <code>ts-node</code>)</td>
-</tr>
-<tr>
-<td><code>npm run build</code></td>
-<td>builds the API for production and outputs the result in <code>dist/</code> (requires <code>tsc</code>)</td>
-</tr>
-<tr>
-<td><code>npm run lint</code></td>
-<td>lints the src directory according to <code>tslint.json</code> and <code>tsconfig.json</code></td>
-</tr>
-</tbody>
-</table>
+                <p>WISP consists of a set of loosly coupled, collaborating services. This structure is what's known as a <a href="https://microservices.io">microservice</a> architecture where each service can be developed, tested, deployed, scaled, and maintained independently from the others.</p>
+<h2 id="diagram">Diagram</h2>
+<p>This is a high-level overview of WISP's architecture:</p>
+<p><br/>
+<img alt="WISP Architecture Diagram" src="../img/wisp-diagram.svg" />
+<br/></p>
+<h2 id="components">Components</h2>
+<h3 id="gateway">Gateway</h3>
+<p>The gateway is responsible for routing traffic to the microservices. Through a set of predefined rules, the gateway analyses the user's request and routes it to the appropriate service. This is also where part of the authorization will occur as, before routing the request, the gateway will forward the user's token to one of our microservices which will in turn check for the appropriate permissions and instruct the gateway to either allow or deny the request. </p>
+<p>We currently use <a href="https://nginx.org/en/docs/">NGINX</a> for our gateway.</p>
+<h3 id="microservices">Microservices</h3>
+<p>The microservices are simple APIs that handle one or, if absolutely necessary, two resources. They all come equipped with basic CRUD functionality as well as some custom routes that follow REST conventions. While independent from each other in terms of development and deployment, they can still communicate through HTTP (until an event/messaging system is implemented). One thing to note is that service to service communication doesn't go through the gateway and doesn't require authorization or authentication.</p>
+<p>We use <a href="https://expressjs.com/">Express</a> for our APIs, <a href="https://vuejs.org/">Vue</a> for our UI, and <a href="https://cloud.google.com/kubernetes-engine">GKE</a> for deployment.</p>
+<h3 id="database">Database</h3>
+<p>We use a managed <a href="https://www.mongodb.com/">MongoDB</a> solution for our database called <a href="https://www.mongodb.com/cloud/atlas">Atlas</a>. Our instances are deployed and managed on GCP so we don't have to go through maintaining and updating them.</p>
                 
               
               
@@ -537,7 +471,7 @@ npm start
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../architecture/" title="Architecture" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../getting_started/" title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -546,19 +480,19 @@ npm start
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Architecture
+                Getting Started
               </div>
             </div>
           </a>
         
         
-          <a href="../problems/" title="Problems" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../microservices/general/" title="General" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Problems
+                General
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -616,15 +550,15 @@ npm start
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
-      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+            worker: "../assets/javascripts/worker/search.37585f48.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
