@@ -37,6 +37,8 @@ For a more extensive documentation, visit the swagger docs
 **Params**
 
 * `token`: JWT token to introspect
+* `uri`: uri used in the request
+* `method`: HTTP method
 
 **Responses**
 
@@ -219,4 +221,13 @@ See user model
 | 200 | User |
 | 404 | User not found |
 | 422 | Missing or invalid userId/problemSetId in body |
+| 500 | Internal server error |
+
+> PATCH /users/resetLastSubmissions
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | Empty |
 | 500 | Internal server error |
