@@ -237,3 +237,20 @@ Resets the codeforces `lastSubmission` field for all users
 | --- | --- |
 | 200 | Empty |
 | 500 | Internal server error |
+
+> PATCH /users/{userId}/updateUserProblems
+
+Updates the users problems from codeforces
+
+**Params**
+
+* `userId`: ID for user to update
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | User |
+| 404 | User not found |
+| 422 | Missing or invalid userId |
+| 500 | Internal server error |
