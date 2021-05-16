@@ -41,7 +41,7 @@
 
 The problems microservice does not depend on any other microservice to be running simultaneously.
 
-1. Clone the desired repository (each microservice can be found in [this README](https://github.com/Compete-McGill/wisp)).
+1. Clone the desired repository (each microservice can be found in [this README](https://github.com/competemcgill/wisp)).
 
 2. Then navigate locally to the root of the repo and run:
 

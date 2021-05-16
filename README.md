@@ -10,9 +10,9 @@ And you can find our **documentation** [**here**](https://docs.wisp.training).
 
 ## Components
 The repositories that make up this application can be found at these repositories:
-* [Problems API Microservice](https://github.com/Compete-McGill/wisp-problems-microservice)
-* [Users API Microservice](https://github.com/Compete-McGill/wisp-users-microservice)
-* [Web Front-end](https://github.com/Compete-McGill/wisp-ui)
+* [Problems API Microservice](https://github.com/competemcgill/wisp-problems-microservice)
+* [Users API Microservice](https://github.com/competemcgill/wisp-users-microservice)
+* [Web Front-end](https://github.com/competemcgill/wisp-ui)
 * This repo (contains documentation and other centralized resources such as e2e tests and build files)
 
 ## Documentation

@@ -1,9 +1,9 @@
 site_name: WISP
-site_url: https://docs.wisp.compete-mcgill.ca
+site_url: https://docs.wisp.competemcgill.com
 site_description: A training platform for competitive programming
 
 repo_name: Compete McGill
-repo_url: https://github.com/Compete-McGill
+repo_url: https://github.com/competemcgill
 edit_uri: ""
 
 nav:
@@ -32,7 +32,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/Compete-McGill
+      link: https://github.com/competemcgill
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/competemcgill/
     - icon: fontawesome/brands/facebook
