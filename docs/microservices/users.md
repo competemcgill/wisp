@@ -227,6 +227,23 @@ Appends problemSet to the user's list of problemSets
 | 422 | Missing or invalid userId/problemSetId in body |
 | 500 | Internal server error |
 
+> PATCH /users/{userId}/resetLastSubmission
+
+Resets the codeforces `lastSubmission` field for a user
+
+**Params**
+
+- `userId`: ID for user to update
+
+**Responses**
+
+| Status | Response |
+| --- | --- |
+| 200 | User |
+| 404 | User not found |
+| 422 | Missing or invalid userId |
+| 500 | Internal server error |
+
 > PATCH /users/resetLastSubmissions
 
 Resets the codeforces `lastSubmission` field for all users
